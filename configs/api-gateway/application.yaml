@@ -4,6 +4,10 @@ server:
 jwt:
   secret: ${JWT_SECRET}
 
+# allowCredentials=true 라 와일드카드 불가 — 오리진을 명시적으로 나열 (쉼표 구분)
+cors:
+  allowed-origins: https://app.antscamp.site,http://localhost:8080,http://localhost:3001
+
 spring:
   cloud:
     gateway:
